@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins&family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+      
+    <title>Inverty</title>
+</head>
+<style>
+    h1{
+        font-family: 'Sansita Swashed',cursive;
+    }
+    body{
+        min-width: 300px;
+        text-align: center;
+    }
+    .yellow{
+        color: rgb(205, 205, 103);
+    }
+    .blue{
+        color:blue;
+    }
+    p,.button{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+    }
+    .button{
+        background-color: chocolate;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 2rem;
+        width: 4rem;
+        border-radius: 0.5rem;
+        margin-left: 1rem;
+        margin-bottom: 0.7rem;
+        /* animation: bgyellow 1s infinite; */
+        cursor: pointer;
+    }
+    .row{
+        padding: 0.25rem;
+        pointer-events: none;
+    }
+    .circle {
+position: absolute;
+top: 0;
+left: 0;
+height: 2rem;
+width: 2rem;
+border-radius: 50%;
+background-color: blueviolet;
+pointer-events: none;
+/* animation-name: moveCircleRight;
+animation-duration: 0.6s; /* Add this line */
+/* animation-iteration-count: infinite; Add this line */ */
+}
+
+@keyframes moveCircleRight {
+from {
+    left: 0;
+    background-color: blueviolet;
+}
+to {
+    left: calc(100% - 2rem);
+    background-color:blueviolet;
+}
+}
+@keyframes movecircleleft {
+from{
+    left: calc(100% - 2rem);
+    background-color:blueviolet;
+}
+to{
+    left: 0;
+    background-color: blueviolet;
+
+}
+}
+@keyframes bgyellow{
+from{
+    background-color: rgb(63, 150, 179);
+}
+to{
+    background-color: rgb(255, 255, 21);
+}
+}
+@keyframes bgblue{
+from{
+    background-color: rgb(255, 255, 21);
+}
+to{
+    background-color: rgb(63, 150, 179);
+}
+}
+</style>
+<body class="pop">
+   <h1><span class="yellow">Invert</span><span class="blue">.io</span></h1> 
+   <p>Bored of looking websites the same way?
+    Meet Invert.io , a chrome extension that can change
+    your website from light mode to dark mode and vice versa!
+   </p>
+   <div class="button">
+    <div class="row">On</div>
+    <div class="row">Off</div>
+    <div class="circle"></div>
+   </div>
+   <script src="appOn.js"></script>
+   <script src="appOff.js"></script>
+   <script src="popup.js"></script>
+</body>
+
+</html>
